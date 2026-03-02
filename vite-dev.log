@@ -1,0 +1,43 @@
+Started vite server in mode: development
+
+  VITE v7.3.1  ready in 244 ms
+
+  ➜  Local:   http://localhost:32400/
+  ➜  Network: http://172.17.0.7:32400/
+11:26:23 AM [vite] http proxy error: /api/health
+Error: connect ECONNREFUSED 127.0.0.1:32401
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+11:26:23 AM [vite] http proxy error: /api/health
+Error: connect ECONNREFUSED 127.0.0.1:32401
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+11:26:23 AM [vite] http proxy error: /api/health
+Error: connect ECONNREFUSED 127.0.0.1:32401
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+Started vite server in mode: development
+
+  VITE v7.3.1  ready in 234 ms
+
+  ➜  Local:   http://localhost:32400/
+  ➜  Network: http://172.17.0.6:32400/
+1:18:11 PM [vite] http proxy error: /api/health
+Error: connect ECONNREFUSED 127.0.0.1:32401
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+1:18:11 PM [vite] http proxy error: /api/health
+Error: connect ECONNREFUSED 127.0.0.1:32401
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+1:29:53 PM [vite] (client) hmr update /src/App.tsx
+1:29:59 PM [vite] (client) hmr update /src/App.tsx
+1:30:03 PM [vite] (client) hmr update /src/App.tsx
+1:30:13 PM [vite] (client) hmr update /src/components/Navigation.tsx
+1:31:34 PM [vite] (client) hmr update /src/components/Gallery.tsx
+1:31:39 PM [vite] (client) hmr update /src/components/Gallery.tsx
+1:36:14 PM [vite] (client) hmr update /src/components/Gallery.tsx, /src/index.css?direct
+1:36:27 PM [vite] (client) hmr update /src/components/Gallery.tsx, /src/index.css?direct
+1:36:38 PM [vite] (client) hmr update /src/components/Gallery.tsx, /src/index.css?direct
+1:36:49 PM [vite] (client) hmr update /src/components/Gallery.tsx, /src/index.css?direct
+Started vite server in mode: development
+
+  VITE v7.3.1  ready in 584 ms
+
+  ➜  Local:   http://localhost:32400/
+  ➜  Network: http://172.17.0.5:32400/

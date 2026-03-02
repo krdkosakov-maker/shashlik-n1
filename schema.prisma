@@ -1,0 +1,84 @@
+generator client {
+  provider   = "prisma-client"
+  output     = "./generated"
+  engineType = "client"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DB_FILE_NAME")
+}
+
+model User {
+  // Adaptive AI platform columns (do not change)
+  id     String  @id
+  name   String?
+  image  String?
+  handle String?
+
+  // Additional columns
+  bookings Booking[]
+  orders   Order[]
+}
+
+model MenuItem {
+  id          String   @id @default(cuid())
+  name        String
+  category    String
+  price       Float
+  unit        String   // "100г" or "шт"
+  description String
+  image       String?
+  createdAt   DateTime @default(now())
+  orderItems  OrderItem[]
+}
+
+model Booking {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  name      String
+  phone     String
+  email     String?
+  date      String
+  time      String
+  guests    Int
+  comment   String?
+  status    String   @default("pending") // pending, confirmed, cancelled
+  createdAt DateTime @default(now())
+}
+
+model Order {
+  id         String      @id @default(cuid())
+  userId     String?
+  user       User?       @relation(fields: [userId], references: [id])
+  name       String
+  phone      String
+  email      String?
+  address    String?
+  pickupTime String?
+  comment    String?
+  status     String      @default("pending") // pending, confirmed, preparing, ready, completed, cancelled
+  total      Float
+  createdAt  DateTime    @default(now())
+  items      OrderItem[]
+}
+
+model OrderItem {
+  id         String   @id @default(cuid())
+  orderId    String
+  order      Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  menuItemId String
+  menuItem   MenuItem @relation(fields: [menuItemId], references: [id])
+  quantity   Int
+  price      Float
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  author    String
+  rating    Int
+  text      String
+  date      String
+  createdAt DateTime @default(now())
+}
